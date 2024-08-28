@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Name": "crudreact-netcore.client\\crudreact-netcore.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Name": "CRUDReact-NetCore.Server\\CRUDReact-NetCore.Server.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

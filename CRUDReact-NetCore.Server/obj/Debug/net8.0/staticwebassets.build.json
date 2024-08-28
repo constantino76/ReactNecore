@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "zGWzpdLL/vOLTAFJMhJfG6kJg2wJpB/FLGiG3MdfJ/s=",
+  "Source": "CRUDReact-NetCore.Server",
+  "BasePath": "_content/CRUDReact-NetCore.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\CursosWeb\\Reac-+Netcore\\CRUDReact-NetCore\\crudreact-netcore.client\\crudreact-netcore.client.esproj",
+      "Version": 2,
+      "Source": "crudreact-netcore.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

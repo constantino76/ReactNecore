@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDReact-NetCore.Server", "CRUDReact-NetCore.Server\CRUDReact-NetCore.Server.csproj", "{BBEE1FCD-D682-4B9A-98C7-F841A3207F3D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "crudreact-netcore.client", "crudreact-netcore.client\crudreact-netcore.client.esproj", "{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBEE1FCD-D682-4B9A-98C7-F841A3207F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBEE1FCD-D682-4B9A-98C7-F841A3207F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBEE1FCD-D682-4B9A-98C7-F841A3207F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBEE1FCD-D682-4B9A-98C7-F841A3207F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FBFA652-52F3-41DD-942F-83C2E7FB87A1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1156E40C-6281-459E-8105-631E75B4C8AB}
+	EndGlobalSection
+EndGlobal

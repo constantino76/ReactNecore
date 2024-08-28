@@ -1,0 +1,1 @@
+C:\CursosWeb\Reac-+Netcore\CRUDReact-NetCore\crudreact-netcore.client\obj\Debug\crudreact-netcore.client.esproj.CoreCompileInputs.cache
