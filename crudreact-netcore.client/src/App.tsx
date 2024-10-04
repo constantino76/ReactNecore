@@ -1,76 +1,86 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Footer from './components/Footer';
 //import Tarjeta from './components/Tarjeta';
 
 
-function App() {
-    let Persona={
+const App=() =>{
 
-        nombre:"juanito",
-        edad:24,
-    correo:"juanito21@gmail.com"}
+    const [empleado, setEmpleados] = useState([]);
+    const urlbase = "https://localhost:7143/api/empleados/getEmpleado";
 
-    const [numero, setNumero] = useState(0);
-    const [persona, setPersona] = useState(Persona);
+    const ConsumirApi = async () => {
+
+        const response = await fetch(urlbase);
+
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            setEmpleados(data);
+        }
+
+
+
+    }
+    useEffect(  () => {
+        
+        ConsumirApi();    
+
+          
+    },[]);
+
     return (
-        <div className=" container-fluid">
-            <div className="row justify-content-sm-center mt-2 ">
-                <div className="col-sm-4  bg-dark">
 
-                    {/*<Tarjeta*/}
-                    {/*    titulo="Bienvenido"*/}
-                    {/*    parrafo="Esta es mi primera pagina en react"*/}
-                    {/*    textoboton="Suscribete">*/}
-                    {/*    <a className="btn btn-success">prueba</a>*/}
 
-                    {/*   </Tarjeta>*/}
+        <div className="row justify-content-center bg-dark-ligth mt-3">
+            <div className="col sm-4">
+                <div className="card">
 
-                    {/*<Tarjeta*/}
-                    {/*    titulo="Bienvenido"*/}
-                    {/*    parrafo="Esta es mi primera pagina en react"*/}
-                    {/*    textoboton="Suscribete para mas contenido" >*/}
-                    {/*    <a className="btn btn-success">prueba</a>*/}
+                    <div className="card-header card text-bg-success mb-3">
 
-                    {/*</Tarjeta>*/}
+                        <h3 className="card-title">lista de empleados </h3>
+                    </div>
 
-                    <h2 className="text-warning">Valor :{numero}</h2>
 
-                    <button  className="btn btn-danger" onClick={
-                              () =>setNumero(numero+1)
-                        }>Sumar +1</button>
+                    <div className="card-body  mt-3">
+                        <table className="table table-striper  bg-ligth">
+                            <thead>
+                                <tr>  <th>#</th>
+                                    <th>Nombre</th>
+                                    <th>Edad</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {empleado.map((item,index) => (
+                                    <tr key={item.id}>
+                                        <td>{index+1 }</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.age}</td>
+                                        <td><button className="btn btn-primary ml-2">Ver</button><button className="btn btn-danger ml-2">Editar</button></td>
 
-                    <br></br>  <br></br>
+                                    </tr>
+                                ))
+                                }
+                            </tbody>
+                        </table>
 
-                    <h4>Datos personales</h4>
 
-                    <p className="text-info"> Nombre: {persona.nombre}
-                        <br></br>
+                    </div>
+                   
 
-                     Edad: { persona.edad}
-                        <br></br>
-                      Correo:  { persona.correo}
 
-                    </p>
-                    <button className="btn btn-success" onClick={() => setPersona(
 
-                        {
-                            ...persona, correo: "juan54@outlot.com"
-                                      ,edad: 26,
-                               
-
-                        }
-
-                    )}>Modificar correo y edad</button>
                 </div>
-
-            </div>
        
 
+            </div>
+            <Footer/>
+
     </div>
-    )
-    
+    );
 }
 
 export default App;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDReact-NetCore.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c71d0c0e51403e038fded35241391c248ce41a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+008343b29b789cf50e9fbdfa883323cb99897256")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDReact-NetCore.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDReact-NetCore.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

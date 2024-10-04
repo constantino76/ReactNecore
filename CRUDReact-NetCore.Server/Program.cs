@@ -13,6 +13,21 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<Empleadocontext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionPorDefecto")));
 
+builder.Services.AddCors(
+    options =>
+    {
+        options.AddPolicy("DefaultCorsPolicy",
+policy =>
+{
+ policy.WithOrigins("https://localhost:5173")
+
+         .AllowAnyMethod()
+         .AllowAnyHeader();
+});
+    });
+    
+    
+
 var app = builder.Build();
 
 app.UseDefaultFiles();
@@ -32,5 +47,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapFallbackToFile("/index.html");
-
+app.UseCors("DefaultCorsPolicy");
 app.Run();

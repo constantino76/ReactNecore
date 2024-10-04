@@ -23,14 +23,17 @@ namespace CRUDReact_NetCore.Server.Controllers
 
         // GET: api/Empleados
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Empleado>>> Gettb_empleados()
+        [Route("getEmpleado")]
+        public async Task<IActionResult> GetEmpleados()
         {
-            return await _context.Ttbempleados.ToListAsync();
+            List<Empleado> empleados = await _context.Ttbempleados.ToListAsync();
+            return StatusCode(StatusCodes.Status200OK,empleados);
+           
         }
 
         // GET: api/Empleados/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Empleado>> GetEmpleado(int id)
+        public async Task<ActionResult<Empleado>> GetEmpleado(int id)    
         {
             var empleado = await _context.Ttbempleados.FindAsync(id);
 
