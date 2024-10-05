@@ -1,0 +1,3 @@
+configurar cors en el archivo program 
+instalar paquete asp.netcore.cors
+ configurar propiedades del proyecto servidor  y elegir que corra en https
